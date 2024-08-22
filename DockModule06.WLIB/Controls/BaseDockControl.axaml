@@ -1,0 +1,30 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:dmwc="using:DockModule06.WLIB.Controls"
+					xmlns:dmwm="using:DockModule06.WLIB.Models">
+	<Design.PreviewWith>
+		<dmwc:BaseDockControl Width="600" Height="400" />
+	</Design.PreviewWith>
+
+	<ControlTheme x:Key="{x:Type dmwc:BaseDockControl}" TargetType="dmwc:BaseDockControl">
+		<Setter Property="Background" Value="LightSkyBlue" />
+		<Setter Property="Foreground" Value="Black" />
+		<Setter Property="VerticalAlignment" Value="Stretch" />
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="Template">
+			<ControlTemplate>
+				<ContentControl x:Name="PART_ContentControl"
+								x:DataType="dmwm:IBaseDock"
+								x:CompileBindings="True"
+								Content="{TemplateBinding Layout}"
+								Background="Cornsilk" >
+					<ContentControl.DataTemplates>
+						<DataTemplate DataType="dmwm:NormalDock" >
+							<dmwc:NormalDockControl />
+						</DataTemplate>
+					</ContentControl.DataTemplates>
+				</ContentControl>
+			</ControlTemplate>
+		</Setter>
+	</ControlTheme>
+</ResourceDictionary>
