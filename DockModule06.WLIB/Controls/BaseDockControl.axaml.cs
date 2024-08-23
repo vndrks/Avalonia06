@@ -7,11 +7,8 @@ namespace DockModule06.WLIB.Controls;
 
 public partial class BaseDockControl : TemplatedControl
 {
-    public static readonly StyledProperty<IBaseDock> LayoutProperty =
-        AvaloniaProperty.Register<BaseDockControl, IBaseDock>(nameof(Layout));
-
-    public static readonly StyledProperty<IBaseDock> LayoutPropertyTemp =
-        AvaloniaProperty.Register<BaseDockControl, IBaseDock>(nameof(LayoutTemp));
+    public static readonly StyledProperty<IBaseDock?> LayoutProperty =
+        AvaloniaProperty.Register<BaseDockControl, IBaseDock?>(nameof(Layout));
 
     public BaseDockControl()
     {
@@ -23,13 +20,6 @@ public partial class BaseDockControl : TemplatedControl
     {
         get => GetValue(LayoutProperty);
         set => SetValue(LayoutProperty, value);
-    }
-
-    [Content]
-    public IBaseDock? LayoutTemp
-    {
-        get => GetValue(LayoutPropertyTemp);
-        set => SetValue(LayoutPropertyTemp, value);
     }
 
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
@@ -48,8 +38,8 @@ public partial class BaseDockControl : TemplatedControl
     {
         base.OnDetachedFromVisualTree(e);
 
-        Func<object?> func = null;
-        func = GetContext;
-        object? GetContext() => DataContext;
+        //Func<object?> func = null;
+        //func = GetContext;
+        //object? GetContext() => DataContext;
     }
 }

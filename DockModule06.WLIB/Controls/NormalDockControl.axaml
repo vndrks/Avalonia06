@@ -18,6 +18,7 @@
 						<RowDefinition Height="*" />
 						<RowDefinition Height="*" />
 						<RowDefinition Height="*" />
+						<RowDefinition Height="1" />
 					</Grid.RowDefinitions>
 					<!-- U should panel with binding to a application's layout -->
 					<!--<ContentControl Grid.Row="0" Grid.Column="0" Content="{Binding TestContent}" Background="NavajoWhite" Width="100" DockPanel.Dock="Left" />-->
@@ -25,6 +26,7 @@
 					<ContentControl Grid.Row="0" Grid.Column="1" Content="{Binding PlayerLayout}" DockPanel.Dock="Top" />
 					<ContentControl Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3" Content="{Binding TimelineLayout}" DockPanel.Dock="Top" />
 					<ContentControl Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Content="{Binding BottomLayout}" DockPanel.Dock="Top" />
+					<ContentControl Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="{Binding TestContent}" DockPanel.Dock="Bottom" />
 				</Grid>
 			</ControlTemplate>
 		</Setter>

@@ -1,6 +1,6 @@
 ﻿namespace DockModule06.WLIB.Models;
 
-public class NormalDock : IBaseDock
+internal class NormalDock : IBaseDock
 {
     public string Id { get; set; }
     public bool IsUsed { get; set; }
@@ -36,7 +36,7 @@ public class NormalDock : IBaseDock
     private string? _TestContent;
     public string? TestContent
     {
-        get => "GetTestContent";
+        get => _TestContent;
         set => _TestContent = "SetTestContent";
     }
 }
