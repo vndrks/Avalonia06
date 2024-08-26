@@ -19,8 +19,8 @@
 								Content="{TemplateBinding Layout}"
 								Background="Cornsilk" >
 					<ContentControl.DataTemplates>
-						<DataTemplate DataType="dmwm:NormalDock" >
-							<dmwc:NormalDockControl />
+						<DataTemplate DataType="dmwm:SubDock" >
+							<dmwc:SubDockControl />
 						</DataTemplate>
 					</ContentControl.DataTemplates>
 				</ContentControl>

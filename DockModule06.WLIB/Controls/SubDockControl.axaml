@@ -2,10 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:dmwc="using:DockModule06.WLIB.Controls" >
 	<Design.PreviewWith>
-		<dmwc:NormalDockControl Width="300" Height="300" />
+		<dmwc:SubDockControl Width="300" Height="300" />
 	</Design.PreviewWith>
 
-	<ControlTheme x:Key="{x:Type dmwc:NormalDockControl}" TargetType="dmwc:NormalDockControl">
+	<ControlTheme x:Key="{x:Type dmwc:SubDockControl}" TargetType="dmwc:SubDockControl">
 		<Setter Property="Template">
 			<ControlTemplate>
 				<Grid Background="Transparent">
@@ -26,7 +26,7 @@
 					<ContentControl Grid.Row="0" Grid.Column="1" Content="{Binding PlayerLayout}" DockPanel.Dock="Top" />
 					<ContentControl Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3" Content="{Binding TimelineLayout}" DockPanel.Dock="Top" />
 					<ContentControl Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Content="{Binding BottomLayout}" DockPanel.Dock="Top" />
-					<ContentControl Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="{Binding TestContent}" DockPanel.Dock="Bottom" />
+					<!--<ContentControl Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="{Binding}" DockPanel.Dock="Bottom" />-->
 				</Grid>
 			</ControlTemplate>
 		</Setter>

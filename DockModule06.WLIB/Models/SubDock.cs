@@ -1,8 +1,8 @@
 ﻿namespace DockModule06.WLIB.Models;
 
-internal class NormalDock : IBaseDock
+public class SubDock : IBaseDock
 {
-    public string Id { get; set; }
+    public string? Id { get; set; }
     public bool IsUsed { get; set; }
 
     private IBaseDock? _MediaLayout;
@@ -33,10 +33,9 @@ internal class NormalDock : IBaseDock
         set => _BottomLayout = value;
     }
 
-    private string? _TestContent;
-    public string? TestContent
+    public override string ToString()
     {
-        get => _TestContent;
-        set => _TestContent = "SetTestContent";
+        return base.ToString() + $".{Id}";
     }
+
 }

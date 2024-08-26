@@ -2,7 +2,7 @@
 
 public interface IBaseDock
 {
-    string Id { get; set; }
+    string? Id { get; set; }
 
     bool IsUsed { get; set; }
 }

@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vms="clr-namespace:Avalonia06.ViewModels.Sub;assembly=Avalonia06"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalonia06.Views.Sub.MediaView"
+			 x:DataType="vms:MediaViewModel" x:CompileBindings="True" Background="Gray">
+	<Design.DataContext>
+		<vms:MediaViewModel />
+	</Design.DataContext>
+
+	<DockPanel>
+		<Grid DockPanel.Dock="Top" RenderOptions.BitmapInterpolationMode="HighQuality">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="40" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			
+			<Image Grid.Row="0" Source="{Binding ImageSource}" Stretch="UniformToFill" />
+			<StackPanel Grid.Row="1" Orientation="Horizontal" Height="30">
+				<Button Content="Set Ready" Command="{Binding ReadyCommand}" />
+				<Button Content="Transform" Command="{Binding TransformCommand}" />
+				<Button Content="Reverse" Command="{Binding ReverseCommand}" />
+			</StackPanel>
+		</Grid>
+	</DockPanel>
+</UserControl>

@@ -7,6 +7,8 @@ namespace Avalonia06.Views
         public MainWindow()
         {
             InitializeComponent();
+            Width = 1920;
+            Height = 1080;
         }
     }
 }

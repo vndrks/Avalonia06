@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vms="clr-namespace:Avalonia06.ViewModels.Sub;assembly=Avalonia06"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalonia06.Views.Sub.PlayerView"
+			 x:DataType="vms:PlayerViewModel" x:CompileBindings="True">
+	<Design.DataContext>
+		<vms:PlayerViewModel />
+	</Design.DataContext>
+
+	<DockPanel>
+		<Panel Background="#000000" DockPanel.Dock="Top" Height="340">
+			
+		</Panel>
+		<Slider x:Name="slider" Height="40" DockPanel.Dock="Top" />
+
+		<StackPanel Orientation="Horizontal" Height="60" DockPanel.Dock="Top" >
+			<Button Content="Prev" />
+			<Button Content="Next" />
+			<Button Content="Play" />
+			<Button Content="Stop" />
+			<Button>
+				<PathIcon Height="18" Classes="ButtonIcon" Data="{StaticResource folder_open_regular}" />
+			</Button>
+		</StackPanel>
+	</DockPanel>
+</UserControl>

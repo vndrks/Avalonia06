@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:Avalonia06"
              x:Class="Avalonia06.App"
-             RequestedThemeVariant="Default">
+             RequestedThemeVariant="Default" >
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
@@ -10,6 +10,8 @@
     </Application.DataTemplates>
 
     <Application.Styles>
+		<StyleInclude Source="avares://DockModule06.WLIB/Resources/BaseTheme.axaml" />
+		<StyleInclude Source="avares://Avalonia06/Assets/Icons.axaml" />
         <FluentTheme />
     </Application.Styles>
 </Application>

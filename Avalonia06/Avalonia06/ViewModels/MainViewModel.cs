@@ -1,4 +1,4 @@
-﻿
+﻿using Avalonia06.ViewModels.Sub;
 using DockModule06.WLIB.Models;
 using ReactiveUI;
 
@@ -15,5 +15,39 @@ public class MainViewModel : ViewModelBase
     {
         get => _Layout;
         set => this.RaiseAndSetIfChanged(ref _Layout, value);
+    }
+
+    public MainViewModel()
+    {
+        Layout = CreateSubLayout();
+    }
+
+    private IBaseDock CreateSubLayout()
+    {
+        var mediaView = new MediaViewModel()
+        {
+            Id = "SubDock.MediaViewModel--",
+            IsUsed = true,
+        };
+
+        var timeView = new TimelineViewModel()
+        {
+            Id = "SubDock.TimelineViewModel--",
+            IsUsed = true,
+        };
+
+        var playerView = new PlayerViewModel()
+        {
+            Id = "SubDock.PlayerViewModel--",
+            IsUsed = true,
+        };
+
+        return new SubDock
+        {
+            Id = "SubDock",
+            MediaLayout = mediaView,
+            TimelineLayout = timeView,
+            PlayerLayout = playerView,
+        };
     }
 }

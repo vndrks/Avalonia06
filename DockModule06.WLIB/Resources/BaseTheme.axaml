@@ -10,7 +10,7 @@
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceInclude Source="/Controls/BaseDockControl.axaml"/>
-				<ResourceInclude Source="/Controls/NormalDockControl.axaml"/>
+				<ResourceInclude Source="/Controls/SubDockControl.axaml"/>
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</Styles.Resources>

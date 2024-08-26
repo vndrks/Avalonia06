@@ -3,7 +3,7 @@ using Avalonia.Controls.Primitives;
 
 namespace DockModule06.WLIB.Controls;
 
-public partial class NormalDockControl : UserControl
+public partial class SubDockControl : UserControl
 {
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
     {
